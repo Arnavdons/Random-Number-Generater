@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<title>Random Number Generator</title>
+</head>
+<body class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-6 col-md-6 col-sm-6" style="text-align: center;">
+
+<h1>Random Number Generator</h1>
+<br>
+<h2>Your Random Number = <br><b id="random_number"></b></h2>
+
+<h3>Your Maximum Number</h3 style="margin-top:40px;">
+<input type="number" id="max_num" placeholder="Write Here Your Maximum Number" style="width: 250px; text-align: center; height: 30px; margin-top: 20px;">
+<br><br>
+<button id="generater" class="btn btn-danger" onclick="generate()">Genrate</button>
+<b><h3 id="warning" style="color: red;"></h3></b>
+<script>
+max_num="";
+
+random_num="";
+
+function generate(){
+max_num=document.getElementById("max_num").value;
+if(max_num==0){
+document.getElementById("warning").innerHTML="You cannot use 0 it allways print 1";
+setTimeout(function(){
+document.getElementById("warning").innerHTML="";
+},5000
+);
+document.getElementById("")
+}
+
+if(max_num==1){
+document.getElementById("warning").innerHTML="You cannot use 1 it allways print 1";
+setTimeout(function(){
+document.getElementById("warning").innerHTML="";
+},5000
+);
+document.getElementById("")
+}
+
+if(max_num==""){
+document.getElementById("warning").innerHTML="First Write Your Maximum Number";
+setTimeout(function(){
+document.getElementById("warning").innerHTML="";
+},5000
+
+);
+}
+else{
+random_num=Math.floor(Math.random() * max_num + 1);
+document.getElementById("random_number").innerHTML=random_num;
+}
+}
+
+</script>
+
+
+
+
+</body>
+</html>
